@@ -1,19 +1,9 @@
-buildscript
-        {
-            repositories {
-                mavenCentral()
-            }
-
-            dependencies
-                    {
-                        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
-                    }
-        }
-
-
-
 plugins {
     id 'java'
+    id 'idea'
+    id 'eclipse'
+    id 'org.springframework.boot' version '2.0.5.RELEASE'
+    id "io.spring.dependency-management" version "1.0.6.RELEASE"
 }
 
 group 'com.lebanmohamed'
@@ -21,11 +11,15 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
-
-
+repositories {
+    mavenCentral()
+}
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.7'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.9.7'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.7'
     
 }
