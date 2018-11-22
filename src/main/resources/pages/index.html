@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Test</title>
+</head>
+<body>
+<h1>JSON Test</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th> Title </th>
+        <th> Author </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${fighters.empty}">
+
+    </tbody>
+
+
+    <!--/*@thymesVar id="fighters" type=""*/-->
+    <tr th:each="id: ${fighters}"></tr>
+
+</table>
+
+</body>
+</html>

@@ -7,7 +7,7 @@ public class Fighter
     @JsonProperty("id")
     private String id;
 
-    @JsonProperty("name")
+
     private String name;
 
     public Fighter(String id, String name)
@@ -30,5 +30,13 @@ public class Fighter
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Fighter{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
